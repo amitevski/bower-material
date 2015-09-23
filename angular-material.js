@@ -2,7 +2,7 @@
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v0.11.0-master-bc4100a
+ * v0.11.0
  */
 (function( window, angular, undefined ){
 "use strict";
@@ -17922,7 +17922,7 @@ MdChipsCtrl.prototype.inputKeydown = function(event) {
 
   switch (event.keyCode) {
     case this.$mdConstant.KEY_CODE.ENTER:
-      if ((this.hasAutocomplete && this.requireMatch) || !chipBuffer) break;
+      if ((event.isDefaultPrevented() || event.defaultPrevented || this.hasAutocomplete && this.requireMatch) || !chipBuffer) break;
       event.preventDefault();
       this.appendChip(chipBuffer);
       this.resetChipBuffer();
