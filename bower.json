@@ -1,6 +1,6 @@
 {
   "name": "angular-material",
-  "version": "master-fcde48",
+  "version": "fix-autocomplete-dropdown-0aebd",
   "ignore": [],
   "dependencies": {
     "angular": "^1.3.0 || >1.4.0-beta.0",
